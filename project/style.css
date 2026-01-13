@@ -1,0 +1,35 @@
+.container{
+    width: 60%;
+    margin: 30px;
+    margin-left: 60px;
+    padding: 60px;
+    text-align: center;
+    border: 4px solid purple;
+    border-radius: 20%;
+    height: 100vh;
+    
+}
+body{
+    background: rgb(22, 21, 21);
+    color: white;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th, tr{
+    border: 2px solid white;
+}
+.alumni-sans-pinstripe-regular {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+header{
+    width: 51%;
+    margin: 30px;
+    margin-left: 120px;
+    padding: 60px;
+    text-align: center;
+    border: 4px solid rgb(255, 255, 255);
+}
