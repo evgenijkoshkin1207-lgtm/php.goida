@@ -2,7 +2,7 @@
 <html lang="ru">
 <head> 
 <body>
-    <form action="index.php" method="get">
+    <form action="i.php" method="get">
         <input type="text" name="вСелоМолочность" id="">
         <button type="submit">goyda</button>
     </form>
