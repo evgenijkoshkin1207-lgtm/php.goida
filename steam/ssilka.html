@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Купить BeamNG.drive в Steam - Казахстан</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #0c1117;
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(26, 95, 180, 0.15) 0%, transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(220, 20, 60, 0.15) 0%, transparent 30%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            color: #1a5fb4;
+            font-size: 2rem;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #1a5fb4, #dc143c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .kz-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, rgba(0, 102, 51, 0.2), rgba(0, 102, 51, 0.1));
+            border: 1px solid rgba(0, 102, 51, 0.4);
+            color: #00cc66;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        
+        /* Game Hero Section */
+        .game-hero {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        @media (max-width: 900px) {
+            .game-hero {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .game-preview {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+        }
+        
+        .game-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .game-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            padding: 40px 30px 20px;
+        }
+        
+        .game-title h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .game-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .game-tag {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Purchase Card */
+        .purchase-card {
+            background: linear-gradient(145deg, rgba(30, 35, 50, 0.95), rgba(20, 25, 40, 0.95));
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            height: fit-content;
+        }
+        
+        .price-section {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .price-label {
+            color: #8ba3ca;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            font-size: 3.5rem;
+            color: #ffffff;
+            font-weight: 800;
+            margin: 10px 0;
+            line-height: 1;
+        }
+        
+        .currency {
+            font-size: 1.2rem;
+            color: #00cc66;
+            font-weight: 600;
+        }
+        
+        .steam-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #1a5fb4, #0d4a9c);
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(26, 95, 180, 0.4);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .steam-button:hover {
+            background: linear-gradient(135deg, #2b6bc5, #1a5fb4);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(26, 95, 180, 0.6);
+        }
+        
+        .steam-logo {
+            width: 32px;
+            height: 32px;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid #ffd700;
+        }
+        
+        .rating-stars {
+            color: #ffd700;
+            font-size: 1.5rem;
+        }
+        
+        .rating-text {
+            color: #ffd700;
+            font-weight: 600;
+        }
+        
+        /* Game Details */
+        .game-details {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        @media (max-width: 900px) {
+            .game-details {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .description {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #b8c7e0;
+            background: rgba(20, 25, 40, 0.7);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #1a5fb4;
+        }
+        
+        .description h2 {
+            color: #33d6ff;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .features-list {
+            margin-top: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            transition: background 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .feature-icon {
+            color: #1a5fb4;
+            font-size: 1.2rem;
+            min-width: 30px;
+        }
+        
+        /* Info Cards */
+        .info-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .info-card {
+            background: rgba(20, 25, 40, 0.7);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .info-card h3 {
+            color: #33d6ff;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-card i {
+            color: #1a5fb4;
+        }
+        
+        .info-item {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .info-label {
+            color: #8ba3ca;
+        }
+        
+        .info-value {
+            color: #ffffff;
+            font-weight: 500;
+        }
+        
+        /* Requirements */
+        .requirements {
+            background: rgba(20, 25, 40, 0.7);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .requirements h2 {
+            color: #33d6ff;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .requirement-card {
+            background: rgba(26, 95, 180, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 4px solid #1a5fb4;
+        }
+        
+        .requirement-card.minimum {
+            border-top-color: #dc143c;
+        }
+        
+        .requirement-card.recommended {
+            border-top-color: #00cc66;
+        }
+        
+        .requirement-card h3 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .requirement-card.minimum h3 {
+            color: #ff6b6b;
+        }
+        
+        .requirement-card.recommended h3 {
+            color: #00cc66;
+        }
+        
+        .requirement-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .requirement-label {
+            color: #8ba3ca;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .requirement-value {
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+        
+        .requirement-note {
+            background: rgba(255, 165, 0, 0.1);
+            border-left: 3px solid #ffa500;
+            padding: 12px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            color: #ffcc80;
+        }
+        
+        .vr-support {
+            background: rgba(148, 0, 211, 0.1);
+            border-left: 3px solid #9400d3;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            color: #dda0dd;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #6d7c9a;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .warning {
+            background: rgba(220, 20, 60, 0.1);
+            border: 1px solid rgba(220, 20, 60, 0.3);
+            color: #ff6b6b;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid #dc143c;
+        }
+        
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .screenshot {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+        
+        .screenshot:hover {
+            transform: translateY(-5px);
+        }
+        
+        .screenshot img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .spec-highlight {
+            color: #ff6b6b;
+            font-weight: 600;
+        }
+        
+        .spec-recommended {
+            color: #00cc66;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            
+            .game-title h1 {
+                font-size: 2.2rem;
+            }
+            
+            .price {
+                font-size: 2.8rem;
+            }
+            
+            .steam-button {
+                padding: 18px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-car-crash logo-icon"></i>
+                <div class="logo-text">BeamNG.drive</div>
+            </div>
+            <div class="kz-badge">
+                <i class="fas fa-flag"></i>
+                <span>Доступно в Казахстане • Цена в тенге</span>
+            </div>
+        </header>
+        
+        <!-- Game Hero Section -->
+        <section class="game-hero">
+            <div class="game-preview">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/284160/header.jpg" alt="BeamNG.drive" class="game-image">
+                <div class="game-title">
+                    <h1>BeamNG.drive</h1>
+                    <div class="game-tags">
+                        <span class="game-tag">Симулятор</span>
+                        <span class="game-tag">Автомобили</span>
+                        <span class="game-tag">Физика</span>
+                        <span class="game-tag">Песочница</span>
+                        <span class="game-tag">Открытый мир</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="purchase-card">
+                <div class="price-section">
+                    <div class="price-label">Цена в Steam для Казахстана</div>
+                    <div class="price">4 999 <span class="currency">₸</span></div>
+                    <div class="price-label">Обычная цена • Без скидки</div>
+                </div>
+                
+                <div class="rating">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="rating-text">
+                        Очень положительные (91%)<br>
+                        <small>107,489 отзывов</small>
+                    </div>
+                </div>
+                
+                <a href="https://store.steampowered.com/app/284160/BeamNGdrive/" target="_blank" class="steam-button">
+                    <img src="https://store.steampowered.com/favicon.ico" alt="Steam" class="steam-logo">
+                    Купить в Steam
+                </a>
+                
+                <div class="warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Вы будете перенаправлены на официальную страницу игры в Steam. Для покупки требуется аккаунт Steam.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Game Details -->
+        <section class="game-details">
+            <div class="description">
+                <h2><i class="fas fa-info-circle"></i> Об игре BeamNG.drive</h2>
+                <p>BeamNG.drive — это реалистичный симулятор автомобилей с мягкой физикой в реальном времени. Игра использует собственную физическую модель мягких тел, которая обеспечивает невероятно реалистичные повреждения, деформации и поведение транспортных средств.</p>
+                
+                <p>Каждый компонент автомобиля моделируется индивидуально, создавая беспрецедентный уровень реализма в симуляции транспортных средств. От небольших столкновений до полномасштабных аварий — физика игры воссоздает все с удивительной точностью.</p>
+                
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fas fa-cogs feature-icon"></i>
+                        <div>
+                            <strong>Реалистичная физика повреждений</strong> — Каждая деталь автомобиля деформируется в реальном времени
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-globe-americas feature-icon"></i>
+                        <div>
+                            <strong>Огромный открытый мир</strong> — Множество карт от пустынь до горных дорог
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-sliders-h feature-icon"></i>
+                        <div>
+                            <strong>Глубокая кастомизация</strong> — Модифицируйте автомобили под свои нужды
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-users feature-icon"></i>
+                        <div>
+                            <strong>Активное сообщество</strong> — Тысячи модификаций в Steam Workshop
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3><i class="fas fa-gamepad"></i> Информация об игре</h3>
+                    <div class="info-item">
+                        <span class="info-label">Разработчик:</span>
+                        <span class="info-value">BeamNG GmbH</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Издатель:</span>
+                        <span class="info-value">BeamNG GmbH</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Дата выхода:</span>
+                        <span class="info-value">29 мая 2015 г.</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Платформа:</span>
+                        <span class="info-value">PC (Windows)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Жанр:</span>
+                        <span class="info-value">Симулятор, Авто</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Язык:</span>
+                        <span class="info-value">Русский (интерфейс)</span>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-chart-line"></i> Статистика</h3>
+                    <div class="info-item">
+                        <span class="info-label">Пик игроков (24ч):</span>
+                        <span class="info-value">8,412</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Всего отзывов:</span>
+                        <span class="info-value">107,489</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Возрастной рейтинг:</span>
+                        <span class="info-value">12+</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Теги Steam:</span>
+                        <span class="info-value">Симулятор, Физика</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Screenshots -->
+        <div class="screenshots">
+            <div class="screenshot">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/284160/ss_1b9d7c6c7c3a4a2c0a2b2c0a2b2c0a2b2c0a2b2c0.600x338.jpg" alt="BeamNG.drive скриншот 1">
+            </div>
+            <div class="screenshot">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/284160/ss_2b9d7c6c7c3a4a2c0a2b2c0a2b2c0a2b2c0a2b2c0.600x338.jpg" alt="BeamNG.drive скриншот 2">
+            </div>
+            <div class="screenshot">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/284160/ss_3b9d7c6c7c3a4a2c0a2b2c0a2b2c0a2b2c0a2b2c0.600x338.jpg" alt="BeamNG.drive скриншот 3">
+            </div>
+            <div class="screenshot">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/284160/ss_4b9d7c6c7c3a4a2c0a2b2c0a2b2c0a2b2c0a2b2c0.600x338.jpg" alt="BeamNG.drive скриншот 4">
+            </div>
+        </div>
+        
+        <!-- System Requirements -->
+        <section class="requirements">
+            <h2><i class="fas fa-laptop-code"></i> Системные требования</h2>
+            <div class="requirements-grid">
+                <!-- Минимальные требования -->
+                <div class="requirement-card minimum">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Минимальные</h3>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">64-разрядные:</span>
+                        <span class="requirement-value spec-highlight">64-разрядные процессор и ОС</span>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">ОС:</span>
+                        <span class="requirement-value spec-highlight">Windows 10 64 Bit</span>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">Процессор:</span>
+                        <span class="requirement-value">
+                            AMD Ryzen 5 1600<br>
+                            <span class="spec-highlight">или</span><br>
+                            Intel Core i5 8400
+                        </span>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">Оперативная память:</span>
+                        <span class="requirement-value spec-highlight">16 GB ОЗУ</span>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">Видеокарта:</span>
+                        <span class="requirement-value">
+                            <span class="spec-highlight">Minimum 6GB VRAM</span><br>
+                            AMD Radeon RX 570<br>
+                            <span class="spec-highlight">или</span><br>
+                            Nvidia GeForce GTX 1060
+                        </span>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">DirectX:</span>
+                        <span class="requirement-value">Версии 11</span>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">Место на диске:</span>
+                        <span class="requirement-value spec-highlight">60 GB</span>
+                    </div>
+                    
+                    <div class="requirement-note">
+                        <i class="fas fa-info-circle"></i>
+                        Установка модов увеличит необходимое место на диске. Рекомендуется геймпад.
+                    </div>
+                </div>
+                
+                <!-- Рекомендованные требования -->
+                <div class="requirement-card recommended">
+                    <h3><i class="fas fa-check-circle"></i> Рекомендованные</h3>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">64-разрядные:</span>
+                        <span class="requirement-value spec-recommended">64-разрядные процессор и ОС</span>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">ОС:</span>
+                        <span class="requirement-value spec-recommended">Windows 10 64 Bit</span>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">Процессор:</span>
+                        <span class="requirement-value">
+                            AMD Ryzen 7 3700X<br>
+                            <span class="spec-recommended">или</span><br>
+                            Intel Core i7 9700
+                        </span>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">Оперативная память:</span>
+                        <span class="requirement-value spec-recommended">32 GB ОЗУ</span>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">Видеокарта:</span>
+                        <span class="requirement-value">
+                            <span class="spec-recommended">Minimum 8GB VRAM</span><br>
+                            AMD RX 6700<br>
+                            <span class="spec-recommended">или</span><br>
+                            Nvidia GeForce RTX 3060
+                        </span>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">DirectX:</span>
+                        <span class="requirement-value">Версии 11</span>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-label">Место на диске:</span>
+                        <span class="requirement-value spec-recommended">60 GB</span>
+                    </div>
+                    
+                    <div class="vr-support">
+                        <i class="fas fa-vr-cardboard"></i>
+                        <strong>Поддержка VR:</strong> 10GB VRAM GPU с поддержкой Vulkan и OpenXR
+                    </div>
+                    
+                    <div class="requirement-note">
+                        <i class="fas fa-info-circle"></i>
+                        Рекомендуемые характеристики для разрешения 1080p. Установка модов увеличит необходимое место на диске. Рекомендуется геймпад.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="warning" style="margin-top: 30px;">
+                <i class="fas fa-exclamation-circle"></i>
+                <strong>Внимание:</strong> BeamNG.drive требует значительных системных ресурсов из-за сложной физической модели. 
+                Для комфортной игры на высоких настройках рекомендуется использовать оборудование, соответствующее или превышающее рекомендуемые требования.
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <p>© 2023 • BeamNG.drive является зарегистрированной торговой маркой BeamNG GmbH</p>
+            <p>Все покупки осуществляются через платформу Steam. Цена указана в казахстанских тенге (₸).</p>
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #8ba3ca;">
+                Цена актуальна на момент создания страницы. Окончательная цена может отличаться в Steam.
+                Системные требования могут меняться с обновлениями игры.
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Анимация появления элементов
+            const fadeInElements = document.querySelectorAll('.game-hero, .game-details, .requirements');
+            
+            const fadeInOnScroll = function() {
+                fadeInElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.style.opacity = "1";
+                        element.style.transform = "translateY(0)";
+                    }
+                });
+            };
+            
+            fadeInElements.forEach(element => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+            });
+            
+            window.addEventListener('scroll', fadeInOnScroll);
+            fadeInOnScroll();
+            
+            // Эффект наведения на кнопку Steam
+            const steamButton = document.querySelector('.steam-button');
+            steamButton.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+            });
+            
+            steamButton.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+            
+            // Подсветка требований при наведении
+            const requirementCards = document.querySelectorAll('.requirement-card');
+            requirementCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.3)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
